@@ -37,6 +37,7 @@ pub fn nullable_field(
 /// JSON decoding (e.g. via `json.parse` with `decode.dynamic`). On the
 /// Erlang target this re-encodes the native term through OTP's json module.
 @external(erlang, "glopenai_codec_ffi", "dynamic_to_json")
+@external(javascript, "../../glopenai_codec_ffi.mjs", "dynamic_to_json")
 pub fn dynamic_to_json(value: Dynamic) -> json.Json
 
 /// Build a JSON object from required fields and optional fields combined.
